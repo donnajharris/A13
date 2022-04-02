@@ -6,6 +6,8 @@ from re import T
 
 count = 0
 
+solutions = []
+
 '''
 Use your Backtrack algorithm to solve the n-queens problem in Python, 
 
@@ -94,13 +96,17 @@ def Process(A, k, S):
     global count
     count = count + 1   # increment the number of solutions found!
     print("\t\t==--- Solution Found ---== >>>>> ",A)
+    global solutions
+    solutions.append(A)
 
 
 def IsFinished():
-    print("\tIsFinished() - Is count ({0}) > 0? {1}".format(count, count > 0))
+    #print("\tIsFinished() - Is count ({0}) > 0? {1}".format(count, count > 0))
     
     # assuming we only want to return 1 result, otherwise always return False
-    return count > 0
+    #return count > 0
+    
+    return False
 
 
 def Backtrack(A, k, S):
@@ -113,24 +119,26 @@ def Backtrack(A, k, S):
         
         for c in L:
             
-            # if k+1 < len(A):
-            A[k+1] = c
-                #print("\t\t\tA[k+1] is set to c")
+            
+            
+            if k+1 < len(A):
+                A[k+1] = c
+                print("\t\tKeep going...!")
             #else:
             #    print("\t\t\tk+1 is bigger than len(A), so we're gonna hit the stop")
             Backtrack(A, k+1, S)
                 
-            if IsFinished():
-                return True
-            else:
-                print("\tStill not done looking for solutions.\n")   
+            # if IsFinished():
+            #     return True
+            # else:
+            #     print("\tStill not done looking for solutions.\n")   
                 
-    return False      
+    # return False      
             
 
 def main():
     
-    n = 2   # NOTE, n must be 4 or greater for the n-queens problem
+    n = 4   # NOTE, n must be 4 or greater for the n-queens problem
     
     print("Hello! n =",n)
     
@@ -139,7 +147,10 @@ def main():
     S = None # unused
     
     result = Backtrack(A, k, S)
-    print("One or more solutions found? ",result,"\n")
+    #print("One or more solutions found? ",result,"\n")
+    
+    global solutions
+    print("Set of all solutions =\n" + str(solutions))
     
 
 

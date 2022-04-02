@@ -1,0 +1,2185 @@
+Hello! n = 4
+
+Backtrack( [0, 0, 0, 0, 0] ,  0 )
+	IsSolution( [0, 0, 0, 0, 0], 0 ) - where k > len(A)? 0 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 0
+		column i= 1
+		column i= 2
+		column i= 3
+		column i= 4
+
+		Returning Result =  [1, 2, 3, 4] 
+
+		Keep going...!
+
+Backtrack( [0, 1, 0, 0, 0] ,  1 )
+	IsSolution( [0, 1, 0, 0, 0], 1 ) - where k > len(A)? 1 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 1
+		column i= 1
+		column i= 2
+		column i= 3
+		column i= 4
+
+		Returning Result =  [1, 2, 3, 4] 
+
+		Keep going...!
+
+Backtrack( [0, 1, 1, 0, 0] ,  2 )
+	IsSolution( [0, 1, 1, 0, 0], 2 ) - where k > len(A)? 2 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 2
+		column i= 1
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+
+		column i= 2
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 3
+			looking at row j =  1
+		column i= 4
+			looking at row j =  1
+
+		Returning Result =  [3, 4] 
+
+		Keep going...!
+
+Backtrack( [0, 1, 1, 3, 0] ,  3 )
+	IsSolution( [0, 1, 1, 3, 0], 3 ) - where k > len(A)? 3 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 3
+		column i= 1
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  2
+			There is a threat in the same column.
+		Found a threat...
+
+		column i= 2
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 3
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  2
+
+		column i= 4
+			looking at row j =  1
+			looking at row j =  2
+
+		Returning Result =  [4] 
+
+		Keep going...!
+
+Backtrack( [0, 1, 1, 3, 4] ,  4 )
+	IsSolution( [0, 1, 1, 3, 4], 4 ) - where k > len(A)? 4 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 4
+		column i= 1
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  2
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  3
+
+		column i= 2
+			looking at row j =  1
+			looking at row j =  2
+			looking at row j =  3
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 3
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  3
+			There is a threat in the same column.
+		Found a threat...
+
+		column i= 4
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  2
+			looking at row j =  3
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+
+		Returning Result =  [] 
+
+		Keep going...!
+
+Backtrack( [0, 1, 1, 4, 4] ,  3 )
+	IsSolution( [0, 1, 1, 4, 4], 3 ) - where k > len(A)? 3 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 3
+		column i= 1
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  2
+			There is a threat in the same column.
+		Found a threat...
+
+		column i= 2
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 3
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  2
+
+		column i= 4
+			looking at row j =  1
+			looking at row j =  2
+
+		Returning Result =  [4] 
+
+		Keep going...!
+
+Backtrack( [0, 1, 1, 4, 4] ,  4 )
+	IsSolution( [0, 1, 1, 4, 4], 4 ) - where k > len(A)? 4 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 4
+		column i= 1
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  2
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  3
+
+		column i= 2
+			looking at row j =  1
+			looking at row j =  2
+			looking at row j =  3
+		column i= 3
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  3
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 4
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  2
+			looking at row j =  3
+			There is a threat in the same column.
+		Found a threat...
+
+
+		Returning Result =  [2] 
+
+
+Backtrack( [0, 1, 1, 4, 4] ,  5 )
+	IsSolution( [0, 1, 1, 4, 4], 5 ) - where k > len(A)? 5 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 5
+		column i= 1
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  2
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  3
+			looking at row j =  4
+
+		column i= 2
+			looking at row j =  1
+			looking at row j =  2
+			looking at row j =  3
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  4
+
+		column i= 3
+			looking at row j =  1
+			looking at row j =  2
+			looking at row j =  3
+			looking at row j =  4
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 4
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  3
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  4
+			There is a threat in the same column.
+		Found a threat...
+
+
+		Returning Result =  [] 
+
+		Keep going...!
+
+Backtrack( [0, 1, 2, 4, 4] ,  2 )
+	IsSolution( [0, 1, 2, 4, 4], 2 ) - where k > len(A)? 2 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 2
+		column i= 1
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+
+		column i= 2
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 3
+			looking at row j =  1
+		column i= 4
+			looking at row j =  1
+
+		Returning Result =  [3, 4] 
+
+		Keep going...!
+
+Backtrack( [0, 1, 2, 3, 4] ,  3 )
+	IsSolution( [0, 1, 2, 3, 4], 3 ) - where k > len(A)? 3 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 3
+		column i= 1
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 2
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat in the same column.
+		Found a threat...
+
+		column i= 3
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 4
+			looking at row j =  1
+			looking at row j =  2
+
+		Returning Result =  [4] 
+
+		Keep going...!
+
+Backtrack( [0, 1, 2, 3, 4] ,  4 )
+	IsSolution( [0, 1, 2, 3, 4], 4 ) - where k > len(A)? 4 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 4
+		column i= 1
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  2
+			looking at row j =  3
+
+		column i= 2
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  3
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 3
+			looking at row j =  1
+			looking at row j =  2
+			looking at row j =  3
+			There is a threat in the same column.
+		Found a threat...
+
+		column i= 4
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  3
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+
+		Returning Result =  [] 
+
+		Keep going...!
+
+Backtrack( [0, 1, 2, 4, 4] ,  3 )
+	IsSolution( [0, 1, 2, 4, 4], 3 ) - where k > len(A)? 3 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 3
+		column i= 1
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 2
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat in the same column.
+		Found a threat...
+
+		column i= 3
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 4
+			looking at row j =  1
+			looking at row j =  2
+
+		Returning Result =  [4] 
+
+		Keep going...!
+
+Backtrack( [0, 1, 2, 4, 4] ,  4 )
+	IsSolution( [0, 1, 2, 4, 4], 4 ) - where k > len(A)? 4 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 4
+		column i= 1
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  2
+			looking at row j =  3
+
+		column i= 2
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  3
+
+		column i= 3
+			looking at row j =  1
+			looking at row j =  2
+			looking at row j =  3
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 4
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  3
+			There is a threat in the same column.
+		Found a threat...
+
+
+		Returning Result =  [] 
+
+		Keep going...!
+
+Backtrack( [0, 1, 3, 4, 4] ,  2 )
+	IsSolution( [0, 1, 3, 4, 4], 2 ) - where k > len(A)? 2 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 2
+		column i= 1
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+
+		column i= 2
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 3
+			looking at row j =  1
+		column i= 4
+			looking at row j =  1
+
+		Returning Result =  [3, 4] 
+
+		Keep going...!
+
+Backtrack( [0, 1, 3, 3, 4] ,  3 )
+	IsSolution( [0, 1, 3, 3, 4], 3 ) - where k > len(A)? 3 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 3
+		column i= 1
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  2
+
+		column i= 2
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 3
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  2
+			There is a threat in the same column.
+		Found a threat...
+
+		column i= 4
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+
+		Returning Result =  [] 
+
+		Keep going...!
+
+Backtrack( [0, 1, 3, 4, 4] ,  3 )
+	IsSolution( [0, 1, 3, 4, 4], 3 ) - where k > len(A)? 3 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 3
+		column i= 1
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  2
+
+		column i= 2
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 3
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  2
+			There is a threat in the same column.
+		Found a threat...
+
+		column i= 4
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+
+		Returning Result =  [] 
+
+		Keep going...!
+
+Backtrack( [0, 1, 4, 4, 4] ,  2 )
+	IsSolution( [0, 1, 4, 4, 4], 2 ) - where k > len(A)? 2 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 2
+		column i= 1
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+
+		column i= 2
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 3
+			looking at row j =  1
+		column i= 4
+			looking at row j =  1
+
+		Returning Result =  [3, 4] 
+
+		Keep going...!
+
+Backtrack( [0, 1, 4, 3, 4] ,  3 )
+	IsSolution( [0, 1, 4, 3, 4], 3 ) - where k > len(A)? 3 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 3
+		column i= 1
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  2
+
+		column i= 2
+			looking at row j =  1
+			looking at row j =  2
+		column i= 3
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 4
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat in the same column.
+		Found a threat...
+
+
+		Returning Result =  [2] 
+
+		Keep going...!
+
+Backtrack( [0, 1, 4, 3, 2] ,  4 )
+	IsSolution( [0, 1, 4, 3, 2], 4 ) - where k > len(A)? 4 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 4
+		column i= 1
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  2
+			looking at row j =  3
+
+		column i= 2
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  3
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 3
+			looking at row j =  1
+			looking at row j =  2
+			looking at row j =  3
+			There is a threat in the same column.
+		Found a threat...
+
+		column i= 4
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  2
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  3
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+
+		Returning Result =  [] 
+
+		Keep going...!
+
+Backtrack( [0, 1, 4, 4, 2] ,  3 )
+	IsSolution( [0, 1, 4, 4, 2], 3 ) - where k > len(A)? 3 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 3
+		column i= 1
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  2
+
+		column i= 2
+			looking at row j =  1
+			looking at row j =  2
+		column i= 3
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 4
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat in the same column.
+		Found a threat...
+
+
+		Returning Result =  [2] 
+
+		Keep going...!
+
+Backtrack( [0, 1, 4, 4, 2] ,  4 )
+	IsSolution( [0, 1, 4, 4, 2], 4 ) - where k > len(A)? 4 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 4
+		column i= 1
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  2
+			looking at row j =  3
+
+		column i= 2
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  3
+
+		column i= 3
+			looking at row j =  1
+			looking at row j =  2
+			looking at row j =  3
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 4
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  2
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  3
+			There is a threat in the same column.
+		Found a threat...
+
+
+		Returning Result =  [] 
+
+		Keep going...!
+
+Backtrack( [0, 2, 4, 4, 2] ,  1 )
+	IsSolution( [0, 2, 4, 4, 2], 1 ) - where k > len(A)? 1 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 1
+		column i= 1
+		column i= 2
+		column i= 3
+		column i= 4
+
+		Returning Result =  [1, 2, 3, 4] 
+
+		Keep going...!
+
+Backtrack( [0, 2, 1, 4, 2] ,  2 )
+	IsSolution( [0, 2, 1, 4, 2], 2 ) - where k > len(A)? 2 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 2
+		column i= 1
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 2
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+
+		column i= 3
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 4
+			looking at row j =  1
+
+		Returning Result =  [4] 
+
+		Keep going...!
+
+Backtrack( [0, 2, 1, 4, 2] ,  3 )
+	IsSolution( [0, 2, 1, 4, 2], 3 ) - where k > len(A)? 3 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 3
+		column i= 1
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat in the same column.
+		Found a threat...
+
+		column i= 2
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 3
+			looking at row j =  1
+			looking at row j =  2
+		column i= 4
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  2
+
+
+		Returning Result =  [3] 
+
+		Keep going...!
+
+Backtrack( [0, 2, 1, 4, 3] ,  4 )
+	IsSolution( [0, 2, 1, 4, 3], 4 ) - where k > len(A)? 4 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 4
+		column i= 1
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  3
+
+		column i= 2
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  2
+			looking at row j =  3
+
+		column i= 3
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  3
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 4
+			looking at row j =  1
+			looking at row j =  2
+			looking at row j =  3
+			There is a threat in the same column.
+		Found a threat...
+
+
+		Returning Result =  [] 
+
+		Keep going...!
+
+Backtrack( [0, 2, 2, 4, 3] ,  2 )
+	IsSolution( [0, 2, 2, 4, 3], 2 ) - where k > len(A)? 2 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 2
+		column i= 1
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 2
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+
+		column i= 3
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 4
+			looking at row j =  1
+
+		Returning Result =  [4] 
+
+		Keep going...!
+
+Backtrack( [0, 2, 2, 4, 3] ,  3 )
+	IsSolution( [0, 2, 2, 4, 3], 3 ) - where k > len(A)? 3 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 3
+		column i= 1
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 2
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  2
+			There is a threat in the same column.
+		Found a threat...
+
+		column i= 3
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 4
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  2
+
+
+		Returning Result =  [] 
+
+		Keep going...!
+
+Backtrack( [0, 2, 3, 4, 3] ,  2 )
+	IsSolution( [0, 2, 3, 4, 3], 2 ) - where k > len(A)? 2 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 2
+		column i= 1
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 2
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+
+		column i= 3
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 4
+			looking at row j =  1
+
+		Returning Result =  [4] 
+
+		Keep going...!
+
+Backtrack( [0, 2, 3, 4, 3] ,  3 )
+	IsSolution( [0, 2, 3, 4, 3], 3 ) - where k > len(A)? 3 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 3
+		column i= 1
+			looking at row j =  1
+			looking at row j =  2
+		column i= 2
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 3
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat in the same column.
+		Found a threat...
+
+		column i= 4
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+
+		Returning Result =  [1] 
+
+		Keep going...!
+
+Backtrack( [0, 2, 3, 4, 1] ,  4 )
+	IsSolution( [0, 2, 3, 4, 1], 4 ) - where k > len(A)? 4 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 4
+		column i= 1
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  3
+
+		column i= 2
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  2
+			looking at row j =  3
+
+		column i= 3
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  3
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 4
+			looking at row j =  1
+			looking at row j =  2
+			looking at row j =  3
+			There is a threat in the same column.
+		Found a threat...
+
+
+		Returning Result =  [] 
+
+		Keep going...!
+
+Backtrack( [0, 2, 4, 4, 1] ,  2 )
+	IsSolution( [0, 2, 4, 4, 1], 2 ) - where k > len(A)? 2 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 2
+		column i= 1
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 2
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+
+		column i= 3
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 4
+			looking at row j =  1
+
+		Returning Result =  [4] 
+
+		Keep going...!
+
+Backtrack( [0, 2, 4, 4, 1] ,  3 )
+	IsSolution( [0, 2, 4, 4, 1], 3 ) - where k > len(A)? 3 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 3
+		column i= 1
+			looking at row j =  1
+			looking at row j =  2
+		column i= 2
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  2
+
+		column i= 3
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 4
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  2
+			There is a threat in the same column.
+		Found a threat...
+
+
+		Returning Result =  [1] 
+
+		Keep going...!
+
+Backtrack( [0, 2, 4, 4, 1] ,  4 )
+	IsSolution( [0, 2, 4, 4, 1], 4 ) - where k > len(A)? 4 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 4
+		column i= 1
+			looking at row j =  1
+			looking at row j =  2
+			looking at row j =  3
+		column i= 2
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  3
+
+		column i= 3
+			looking at row j =  1
+			looking at row j =  2
+			looking at row j =  3
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 4
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  3
+			There is a threat in the same column.
+		Found a threat...
+
+
+		Returning Result =  [1] 
+
+
+Backtrack( [0, 2, 4, 4, 1] ,  5 )
+	IsSolution( [0, 2, 4, 4, 1], 5 ) - where k > len(A)? 5 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 5
+		column i= 1
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  3
+			looking at row j =  4
+			There is a threat in the same column.
+		Found a threat...
+
+		column i= 2
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  2
+			looking at row j =  3
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  4
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 3
+			looking at row j =  1
+			looking at row j =  2
+			looking at row j =  3
+			looking at row j =  4
+		column i= 4
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  3
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  4
+
+
+		Returning Result =  [3] 
+
+
+Backtrack( [0, 2, 4, 4, 1] ,  6 )
+	IsSolution( [0, 2, 4, 4, 1], 6 ) - where k > len(A)? 6 > 5? True
+
+	Process() - 
+		==--- Solution Found ---== >>>>>  [0, 2, 4, 4, 1]
+		Keep going...!
+
+Backtrack( [0, 3, 4, 4, 1] ,  1 )
+	IsSolution( [0, 3, 4, 4, 1], 1 ) - where k > len(A)? 1 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 1
+		column i= 1
+		column i= 2
+		column i= 3
+		column i= 4
+
+		Returning Result =  [1, 2, 3, 4] 
+
+		Keep going...!
+
+Backtrack( [0, 3, 1, 4, 1] ,  2 )
+	IsSolution( [0, 3, 1, 4, 1], 2 ) - where k > len(A)? 2 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 2
+		column i= 1
+			looking at row j =  1
+		column i= 2
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 3
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+
+		column i= 4
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+
+		Returning Result =  [1] 
+
+		Keep going...!
+
+Backtrack( [0, 3, 1, 1, 1] ,  3 )
+	IsSolution( [0, 3, 1, 1, 1], 3 ) - where k > len(A)? 3 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 3
+		column i= 1
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  2
+			There is a threat in the same column.
+		Found a threat...
+
+		column i= 2
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 3
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  2
+
+		column i= 4
+			looking at row j =  1
+			looking at row j =  2
+
+		Returning Result =  [4] 
+
+		Keep going...!
+
+Backtrack( [0, 3, 1, 1, 4] ,  4 )
+	IsSolution( [0, 3, 1, 1, 4], 4 ) - where k > len(A)? 4 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 4
+		column i= 1
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  3
+			There is a threat in the same column.
+		Found a threat...
+
+		column i= 2
+			looking at row j =  1
+			looking at row j =  2
+			looking at row j =  3
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 3
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  3
+
+		column i= 4
+			looking at row j =  1
+			looking at row j =  2
+			looking at row j =  3
+
+		Returning Result =  [4] 
+
+
+Backtrack( [0, 3, 1, 1, 4] ,  5 )
+	IsSolution( [0, 3, 1, 1, 4], 5 ) - where k > len(A)? 5 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 5
+		column i= 1
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  3
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  4
+
+		column i= 2
+			looking at row j =  1
+			looking at row j =  2
+			looking at row j =  3
+			looking at row j =  4
+		column i= 3
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  2
+			looking at row j =  3
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  4
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 4
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  3
+			looking at row j =  4
+			There is a threat in the same column.
+		Found a threat...
+
+
+		Returning Result =  [2] 
+
+
+Backtrack( [0, 3, 1, 1, 4] ,  6 )
+	IsSolution( [0, 3, 1, 1, 4], 6 ) - where k > len(A)? 6 > 5? True
+
+	Process() - 
+		==--- Solution Found ---== >>>>>  [0, 3, 1, 1, 4]
+		Keep going...!
+
+Backtrack( [0, 3, 2, 1, 4] ,  2 )
+	IsSolution( [0, 3, 2, 1, 4], 2 ) - where k > len(A)? 2 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 2
+		column i= 1
+			looking at row j =  1
+		column i= 2
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 3
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+
+		column i= 4
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+
+		Returning Result =  [1] 
+
+		Keep going...!
+
+Backtrack( [0, 3, 2, 1, 4] ,  3 )
+	IsSolution( [0, 3, 2, 1, 4], 3 ) - where k > len(A)? 3 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 3
+		column i= 1
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 2
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat in the same column.
+		Found a threat...
+
+		column i= 3
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 4
+			looking at row j =  1
+			looking at row j =  2
+
+		Returning Result =  [4] 
+
+		Keep going...!
+
+Backtrack( [0, 3, 2, 1, 4] ,  4 )
+	IsSolution( [0, 3, 2, 1, 4], 4 ) - where k > len(A)? 4 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 4
+		column i= 1
+			looking at row j =  1
+			looking at row j =  2
+			looking at row j =  3
+			There is a threat in the same column.
+		Found a threat...
+
+		column i= 2
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  3
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 3
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  2
+			looking at row j =  3
+
+		column i= 4
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  3
+
+
+		Returning Result =  [] 
+
+		Keep going...!
+
+Backtrack( [0, 3, 3, 1, 4] ,  2 )
+	IsSolution( [0, 3, 3, 1, 4], 2 ) - where k > len(A)? 2 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 2
+		column i= 1
+			looking at row j =  1
+		column i= 2
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 3
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+
+		column i= 4
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+
+		Returning Result =  [1] 
+
+		Keep going...!
+
+Backtrack( [0, 3, 3, 1, 4] ,  3 )
+	IsSolution( [0, 3, 3, 1, 4], 3 ) - where k > len(A)? 3 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 3
+		column i= 1
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  2
+
+		column i= 2
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 3
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  2
+			There is a threat in the same column.
+		Found a threat...
+
+		column i= 4
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+
+		Returning Result =  [] 
+
+		Keep going...!
+
+Backtrack( [0, 3, 4, 1, 4] ,  2 )
+	IsSolution( [0, 3, 4, 1, 4], 2 ) - where k > len(A)? 2 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 2
+		column i= 1
+			looking at row j =  1
+		column i= 2
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 3
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+
+		column i= 4
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+
+		Returning Result =  [1] 
+
+		Keep going...!
+
+Backtrack( [0, 3, 4, 1, 4] ,  3 )
+	IsSolution( [0, 3, 4, 1, 4], 3 ) - where k > len(A)? 3 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 3
+		column i= 1
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  2
+
+		column i= 2
+			looking at row j =  1
+			looking at row j =  2
+		column i= 3
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 4
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat in the same column.
+		Found a threat...
+
+
+		Returning Result =  [2] 
+
+		Keep going...!
+
+Backtrack( [0, 3, 4, 1, 2] ,  4 )
+	IsSolution( [0, 3, 4, 1, 2], 4 ) - where k > len(A)? 4 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 4
+		column i= 1
+			looking at row j =  1
+			looking at row j =  2
+			looking at row j =  3
+			There is a threat in the same column.
+		Found a threat...
+
+		column i= 2
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  3
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 3
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  2
+			looking at row j =  3
+
+		column i= 4
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  3
+
+
+		Returning Result =  [] 
+
+		Keep going...!
+
+Backtrack( [0, 4, 4, 1, 2] ,  1 )
+	IsSolution( [0, 4, 4, 1, 2], 1 ) - where k > len(A)? 1 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 1
+		column i= 1
+		column i= 2
+		column i= 3
+		column i= 4
+
+		Returning Result =  [1, 2, 3, 4] 
+
+		Keep going...!
+
+Backtrack( [0, 4, 1, 1, 2] ,  2 )
+	IsSolution( [0, 4, 1, 1, 2], 2 ) - where k > len(A)? 2 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 2
+		column i= 1
+			looking at row j =  1
+		column i= 2
+			looking at row j =  1
+		column i= 3
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 4
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+
+
+		Returning Result =  [1, 2] 
+
+		Keep going...!
+
+Backtrack( [0, 4, 1, 1, 2] ,  3 )
+	IsSolution( [0, 4, 1, 1, 2], 3 ) - where k > len(A)? 3 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 3
+		column i= 1
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat in the same column.
+		Found a threat...
+
+		column i= 2
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 3
+			looking at row j =  1
+			looking at row j =  2
+		column i= 4
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  2
+
+
+		Returning Result =  [3] 
+
+		Keep going...!
+
+Backtrack( [0, 4, 1, 1, 3] ,  4 )
+	IsSolution( [0, 4, 1, 1, 3], 4 ) - where k > len(A)? 4 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 4
+		column i= 1
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  2
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  3
+			There is a threat in the same column.
+		Found a threat...
+
+		column i= 2
+			looking at row j =  1
+			looking at row j =  2
+			looking at row j =  3
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 3
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  3
+
+		column i= 4
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  2
+			looking at row j =  3
+
+
+		Returning Result =  [] 
+
+		Keep going...!
+
+Backtrack( [0, 4, 1, 2, 3] ,  3 )
+	IsSolution( [0, 4, 1, 2, 3], 3 ) - where k > len(A)? 3 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 3
+		column i= 1
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat in the same column.
+		Found a threat...
+
+		column i= 2
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 3
+			looking at row j =  1
+			looking at row j =  2
+		column i= 4
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  2
+
+
+		Returning Result =  [3] 
+
+		Keep going...!
+
+Backtrack( [0, 4, 1, 2, 3] ,  4 )
+	IsSolution( [0, 4, 1, 2, 3], 4 ) - where k > len(A)? 4 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 4
+		column i= 1
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  2
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  3
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 2
+			looking at row j =  1
+			looking at row j =  2
+			looking at row j =  3
+			There is a threat in the same column.
+		Found a threat...
+
+		column i= 3
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  3
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 4
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  2
+			looking at row j =  3
+
+
+		Returning Result =  [] 
+
+		Keep going...!
+
+Backtrack( [0, 4, 2, 2, 3] ,  2 )
+	IsSolution( [0, 4, 2, 2, 3], 2 ) - where k > len(A)? 2 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 2
+		column i= 1
+			looking at row j =  1
+		column i= 2
+			looking at row j =  1
+		column i= 3
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 4
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+
+
+		Returning Result =  [1, 2] 
+
+		Keep going...!
+
+Backtrack( [0, 4, 2, 1, 3] ,  3 )
+	IsSolution( [0, 4, 2, 1, 3], 3 ) - where k > len(A)? 3 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 3
+		column i= 1
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 2
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  2
+			There is a threat in the same column.
+		Found a threat...
+
+		column i= 3
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 4
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  2
+
+
+		Returning Result =  [] 
+
+		Keep going...!
+
+Backtrack( [0, 4, 2, 2, 3] ,  3 )
+	IsSolution( [0, 4, 2, 2, 3], 3 ) - where k > len(A)? 3 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 3
+		column i= 1
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 2
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  2
+			There is a threat in the same column.
+		Found a threat...
+
+		column i= 3
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 4
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  2
+
+
+		Returning Result =  [] 
+
+		Keep going...!
+
+Backtrack( [0, 4, 3, 2, 3] ,  2 )
+	IsSolution( [0, 4, 3, 2, 3], 2 ) - where k > len(A)? 2 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 2
+		column i= 1
+			looking at row j =  1
+		column i= 2
+			looking at row j =  1
+		column i= 3
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 4
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+
+
+		Returning Result =  [1, 2] 
+
+		Keep going...!
+
+Backtrack( [0, 4, 3, 1, 3] ,  3 )
+	IsSolution( [0, 4, 3, 1, 3], 3 ) - where k > len(A)? 3 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 3
+		column i= 1
+			looking at row j =  1
+			looking at row j =  2
+		column i= 2
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 3
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat in the same column.
+		Found a threat...
+
+		column i= 4
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+
+		Returning Result =  [1] 
+
+		Keep going...!
+
+Backtrack( [0, 4, 3, 1, 1] ,  4 )
+	IsSolution( [0, 4, 3, 1, 1], 4 ) - where k > len(A)? 4 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 4
+		column i= 1
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  3
+			There is a threat in the same column.
+		Found a threat...
+
+		column i= 2
+			looking at row j =  1
+			looking at row j =  2
+			looking at row j =  3
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 3
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  3
+
+		column i= 4
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  2
+			looking at row j =  3
+
+
+		Returning Result =  [] 
+
+		Keep going...!
+
+Backtrack( [0, 4, 3, 2, 1] ,  3 )
+	IsSolution( [0, 4, 3, 2, 1], 3 ) - where k > len(A)? 3 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 3
+		column i= 1
+			looking at row j =  1
+			looking at row j =  2
+		column i= 2
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 3
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat in the same column.
+		Found a threat...
+
+		column i= 4
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+
+		Returning Result =  [1] 
+
+		Keep going...!
+
+Backtrack( [0, 4, 3, 2, 1] ,  4 )
+	IsSolution( [0, 4, 3, 2, 1], 4 ) - where k > len(A)? 4 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 4
+		column i= 1
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  3
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 2
+			looking at row j =  1
+			looking at row j =  2
+			looking at row j =  3
+			There is a threat in the same column.
+		Found a threat...
+
+		column i= 3
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  3
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 4
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  2
+			looking at row j =  3
+
+
+		Returning Result =  [] 
+
+		Keep going...!
+
+Backtrack( [0, 4, 4, 2, 1] ,  2 )
+	IsSolution( [0, 4, 4, 2, 1], 2 ) - where k > len(A)? 2 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 2
+		column i= 1
+			looking at row j =  1
+		column i= 2
+			looking at row j =  1
+		column i= 3
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 4
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+
+
+		Returning Result =  [1, 2] 
+
+		Keep going...!
+
+Backtrack( [0, 4, 4, 1, 1] ,  3 )
+	IsSolution( [0, 4, 4, 1, 1], 3 ) - where k > len(A)? 3 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 3
+		column i= 1
+			looking at row j =  1
+			looking at row j =  2
+		column i= 2
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  2
+
+		column i= 3
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 4
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  2
+			There is a threat in the same column.
+		Found a threat...
+
+
+		Returning Result =  [1] 
+
+		Keep going...!
+
+Backtrack( [0, 4, 4, 1, 1] ,  4 )
+	IsSolution( [0, 4, 4, 1, 1], 4 ) - where k > len(A)? 4 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 4
+		column i= 1
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  2
+			looking at row j =  3
+			There is a threat in the same column.
+		Found a threat...
+
+		column i= 2
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  3
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 3
+			looking at row j =  1
+			looking at row j =  2
+			looking at row j =  3
+		column i= 4
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  2
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  3
+
+
+		Returning Result =  [3] 
+
+
+Backtrack( [0, 4, 4, 1, 1] ,  5 )
+	IsSolution( [0, 4, 4, 1, 1], 5 ) - where k > len(A)? 5 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 5
+		column i= 1
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  3
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  4
+			There is a threat in the same column.
+		Found a threat...
+
+		column i= 2
+			looking at row j =  1
+			looking at row j =  2
+			looking at row j =  3
+			looking at row j =  4
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 3
+			looking at row j =  1
+			looking at row j =  2
+			looking at row j =  3
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  4
+
+		column i= 4
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  2
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  3
+			looking at row j =  4
+
+
+		Returning Result =  [] 
+
+		Keep going...!
+
+Backtrack( [0, 4, 4, 2, 1] ,  3 )
+	IsSolution( [0, 4, 4, 2, 1], 3 ) - where k > len(A)? 3 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 3
+		column i= 1
+			looking at row j =  1
+			looking at row j =  2
+		column i= 2
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  2
+
+		column i= 3
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 4
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  2
+			There is a threat in the same column.
+		Found a threat...
+
+
+		Returning Result =  [1] 
+
+		Keep going...!
+
+Backtrack( [0, 4, 4, 2, 1] ,  4 )
+	IsSolution( [0, 4, 4, 2, 1], 4 ) - where k > len(A)? 4 > 5? False
+
+	ConstructCandidates()	- for Queen in Row k = 4
+		column i= 1
+			looking at row j =  1
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  2
+			looking at row j =  3
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 2
+			looking at row j =  1
+			looking at row j =  2
+			There is a threat on one of the diagonals.
+		Found a threat...
+			looking at row j =  3
+			There is a threat in the same column.
+		Found a threat...
+
+		column i= 3
+			looking at row j =  1
+			looking at row j =  2
+			looking at row j =  3
+			There is a threat on one of the diagonals.
+		Found a threat...
+
+		column i= 4
+			looking at row j =  1
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  2
+			There is a threat in the same column.
+		Found a threat...
+			looking at row j =  3
+
+
+		Returning Result =  [] 
+
+Set of all solutions =
+[[0, 4, 4, 2, 1], [0, 4, 4, 2, 1]]
