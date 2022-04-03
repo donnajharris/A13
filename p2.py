@@ -3,11 +3,8 @@
 
 import copy
 
-# globals
-count = 0
-solutions = []
-
-SINGLE_RESULT = False
+# global
+solution_count = 0
 
 
 def IsSolution(A, k, S):   
@@ -44,17 +41,12 @@ def ConstructCandidates(A, k, S):
 
 
 def Process(A, k, S):
-    global count
-    count = count + 1   # increment the number of solutions found!
-
-    global solutions
-    solutions.append(copy.copy(A[1:len(A)]))
+    global solution_count
+    solution_count = solution_count + 1   # increment the number of solutions found!
+    print(A[1:len(A)])
 
 
 def IsFinished():    
-    if SINGLE_RESULT:
-        return count > 0
-    
     # don't stop until all results are generated
     return False
 
@@ -76,22 +68,17 @@ def Backtrack(A, k, S):
 
 def main():
     
-    n = 8  # NOTE, n must be 4 or greater for the n-queens problem    
+    n = 8  # NOTE, n must be 1, or 4+ for a solution to the n-queens problem    
     
-    print("\nThere are",n,"queens.")
+    print("\nTrying to neutrally place",n,"queens on a",n,"x",n,"board.\n")
     
     A = [0] * (n+1)
     k = 1
     S = None # unused
     
     result = Backtrack(A, k, S)
-    
-    global solutions
-    #print("Set of all solutions =\n" + str(solutions))
-    if SINGLE_RESULT and len(solutions) == 1:
-        print("Here's one solution:",solutions[0],"\n")
-    else:
-        print(len(solutions),"solutions were found.\n")
+
+    print("\n",solution_count,"solutions exist for the " + str(n) + "-Queens problem.")
     
 
 main()
