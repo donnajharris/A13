@@ -11,7 +11,7 @@ SINGLE_RESULT = False
 
 
 def IsSolution(A, k, S):   
-    return k > len(A) -1
+    return k > len(A)-1
 
 
 def HasThreatInColumn(A, i, j):
@@ -29,47 +29,37 @@ def ThreatIsFound(A, i, j, k):
 def ConstructCandidates(A, k, S):
     Result = []
     
-    # i is column...
     for i in range(1, len(A)):
         hasThreat = False
         
-        # print("\t\tcolumn i=",i)
-        
-        # looking at ***PREVIOUSLY*** placed queens
-        for j in range(1, k):
-            # k-1):  this SHOULD be k, because the upper range is NOT inclusive in Python
-
-            # print("\t\t\tlooking at row j = ",j)
-                        
+        # looking from 1st to (k-1)th placed queen      
+        for j in range(1, k):                  
             if ThreatIsFound(A, i, j, k):
                 hasThreat = True
                 
         if not hasThreat:
             Result.append(i)
-
-                        
+        
     return Result
 
 
 def Process(A, k, S):
     global count
     count = count + 1   # increment the number of solutions found!
-    #print("\t\t==--- Solution Found ---== >>>>> ",A)
+
     global solutions
     solutions.append(copy.copy(A[1:len(A)]))
 
 
 def IsFinished():    
-    # assuming we only want to return 1 result, otherwise always return False
-    
     if SINGLE_RESULT:
         return count > 0
     
+    # don't stop until all results are generated
     return False
 
 
 def Backtrack(A, k, S):
-    # print("\nBacktrack(",A,", ",k,")")
           
     if IsSolution(A, k, S):
         Process(A, k, S)
@@ -88,7 +78,7 @@ def main():
     
     n = 8  # NOTE, n must be 4 or greater for the n-queens problem    
     
-    print("Hello! n =",n)
+    print("\nThere are",n,"queens.")
     
     A = [0] * (n+1)
     k = 1
@@ -98,8 +88,10 @@ def main():
     
     global solutions
     #print("Set of all solutions =\n" + str(solutions))
-    print("Number of possible solutions? ",len(solutions),"\n")
+    if SINGLE_RESULT and len(solutions) == 1:
+        print("Here's one solution:",solutions[0],"\n")
+    else:
+        print(len(solutions),"solutions were found.\n")
     
-
 
 main()
