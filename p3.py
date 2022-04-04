@@ -1,20 +1,17 @@
+# -----------------------------------------------------------
 # p3.py
-
-'''
-
-Modify your callback functions to find:
-
-1) the TOTAL number of solutions you found for:
-   a.) 8-queens, 
-   b.) 10-queens, and
-   c.) 12-queens problem, 
-   
-2) as well as the number of recursive calls for each case.
-
-3) Report your findings in a table.   (printed output)
-
-
-'''
+# -----------------------------------------------------------
+# Donna Harris (harr2890)
+# CP600 W22 - Assignment 13, Question 3
+# -----------------------------------------------------------
+# Question 3 can be demonstrated by running:
+#    $ python3 p3.py
+# 
+# See a13.pdf for more information and analysis of results.
+#
+# The main() code is at the bottom of the file.
+# 
+# -----------------------------------------------------------
 
 import copy
 
@@ -93,7 +90,11 @@ def Backtrack(A, k, S):
          if IsFinished():
                return True   
    
-
+   
+##############################################
+#  Question 3 code for running test cases
+#     and displaying results
+#
 def Solve_N_Queens(n):
        ResetGlobals()
    
@@ -113,7 +114,7 @@ def Solve_N_Queens(n):
 
 
 def PrintResultsSummary(results):       
-       print("\n%4s %12s  %22s" % ("N","solutions","recursive calls made"))
+       print("\n%4s %12s  %22s" % ("n","solutions","recursive calls made"))
        print("%4s %12s  %22s" % ("--","----------","--------------------"))
        
        for result in results:
@@ -124,10 +125,12 @@ def PrintResultsSummary(results):
 
 def main():
        table_results = []
-       table_results.append((8, Solve_N_Queens(8)))
-       table_results.append((10, Solve_N_Queens(10)))
-       table_results.append((12,Solve_N_Queens(12)))
+      #  table_results.append((8, Solve_N_Queens(8)))
+      #  table_results.append((10, Solve_N_Queens(10)))
+      #  table_results.append((12,Solve_N_Queens(12)))
+       table_results.append((14,Solve_N_Queens(14)))
        
        PrintResultsSummary(table_results)
+   
    
 main()

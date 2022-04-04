@@ -1,5 +1,17 @@
+# -----------------------------------------------------------
 # p2.py
-
+# -----------------------------------------------------------
+# Donna Harris (harr2890)
+# CP600 W22 - Assignment 13, Question 2
+# -----------------------------------------------------------
+# Question 2 can be demonstrated by running (hard-coded to n=8):
+#    $ python3 p2.py
+# 
+# See a13.pdf for more information.
+#
+# The main() code is at the bottom of the file.
+# 
+# -----------------------------------------------------------
 
 import copy
 
