@@ -125,10 +125,9 @@ def PrintResultsSummary(results):
 
 def main():
        table_results = []
-      #  table_results.append((8, Solve_N_Queens(8)))
-      #  table_results.append((10, Solve_N_Queens(10)))
-      #  table_results.append((12,Solve_N_Queens(12)))
-       table_results.append((14,Solve_N_Queens(14)))
+       table_results.append((8, Solve_N_Queens(8)))
+       table_results.append((10, Solve_N_Queens(10)))
+       table_results.append((12,Solve_N_Queens(12)))
        
        PrintResultsSummary(table_results)
    
